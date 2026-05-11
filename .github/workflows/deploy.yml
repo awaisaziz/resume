@@ -1,47 +1,37 @@
-name: 🚀 Deploy Portfolio to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
-  workflow_dispatch:   # lets you trigger a deploy from the GitHub UI
+    branches: [main]
+  workflow_dispatch: # allows manual trigger from GitHub UI
 
 permissions:
-  contents: write   # gh-pages needs to push to the gh-pages branch
+  contents: write
 
 jobs:
   build-and-deploy:
-    name: Build & Deploy
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout source code
-      - name: ⬇️ Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Set up Node.js
-      - name: 🟢 Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
 
-      # 3. Install dependencies
-      - name: 📦 Install dependencies
+      - name: Install dependencies
         run: npm ci
 
-      # 4. Build the Vite app
-      #    The secret is injected as an env var so Vite can pick it up
-      #    via import.meta.env.VITE_WEB3FORMS_ACCESS_KEY at build time.
-      - name: 🔨 Build
+      - name: Build
         run: npm run build
         env:
           VITE_WEB3FORMS_ACCESS_KEY: ${{ secrets.VITE_WEB3FORMS_ACCESS_KEY }}
 
-      # 5. Deploy the built dist/ folder to the gh-pages branch
-      - name: 🚢 Deploy to GitHub Pages
+      - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          cname: ''   # set your custom domain here if you have one, e.g. awaisaziz.dev
