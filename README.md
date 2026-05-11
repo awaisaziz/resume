@@ -2,7 +2,7 @@
 
 # Hi there, I'm Awais Aziz 👋
 
-[![Portfolio Live](https://img.shields.io/badge/🌐%20Portfolio-Live-6d28d9?style=for-the-badge)](https://awaisaziz.github.io)
+[![Portfolio Live](https://img.shields.io/badge/🌐%20Portfolio-Live-6d28d9?style=for-the-badge)](https://awaisaziz.github.io/resume/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/awais-aziz-4bb7a318a)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/awaisaziz)
 [![Deploy Status](https://img.shields.io/github/actions/workflow/status/awaisaziz/awaisaziz/deploy.yml?branch=main&label=Deploy&style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/awaisaziz/awaisaziz/actions/workflows/deploy.yml)

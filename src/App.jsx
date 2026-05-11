@@ -92,14 +92,14 @@ const BackToTop = () => {
   );
 };
 
-const Hero = ({ meta, bodyHtml, tagline }) => (
+const Hero = ({ meta, bodyHtml, tagline, base }) => (
   <section id="hero" className="hero-section">
     <div className="hero-content">
       <div className="hero-left">
         <div className="hero-avatar-wrap">
           <img
             id="heroAvatar"
-            src="/profile.jpg"
+            src={`${base}profile.jpg`}
             alt={meta?.name || "Awais Aziz"}
             className="hero-avatar"
             onError={(e) => { e.target.src = 'https://avatars.githubusercontent.com/u/52965709?v=4'; }}
@@ -348,7 +348,7 @@ const ContactForm = () => {
   );
 };
 
-const Certifications = ({ items }) => {
+const Certifications = ({ items, base }) => {
   if (!items || items.length === 0) return <p className="text-muted">No certifications found.</p>;
   return (
     <>
@@ -358,7 +358,7 @@ const Certifications = ({ items }) => {
             {cert.badge_url ? (
               <img
                 className="cert-badge"
-                src={`/${cert.badge_url}`}
+                src={`${base}${cert.badge_url}`}
                 alt={`${cert.name} badge`}
                 loading="lazy"
                 onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
@@ -382,7 +382,7 @@ const Certifications = ({ items }) => {
   );
 };
 
-const Projects = ({ items }) => {
+const Projects = ({ items, base }) => {
   if (!items || items.length === 0) return <p className="text-muted">No projects found.</p>;
 
   const getPollinationsUrl = (projectName, description) => {
@@ -398,7 +398,7 @@ const Projects = ({ items }) => {
     <div className="project-grid">
       {items.map((proj, idx) => {
         const aiImageUrl = getPollinationsUrl(proj.name, proj.description);
-        const imageUrl = proj.image ? `/${proj.image}` : aiImageUrl; // use leading slash since it's in public
+        const imageUrl = proj.image ? `${base}${proj.image}` : aiImageUrl; // base-relative path for public assets
 
         return (
           <FadeInChild
@@ -597,14 +597,22 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  if (loading) return null;
+  if (loading) return (
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--bg-primary, #0f172a)' }}>
+      <div style={{ textAlign: 'center', color: 'var(--text-primary, #e2e8f0)' }}>
+        <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚡</div>
+        <p style={{ fontFamily: 'Inter, sans-serif', opacity: 0.7 }}>Loading...</p>
+      </div>
+    </div>
+  );
 
   const { aboutMeta, aboutBody, experience, education, research, certifications, projects } = data;
+  const base = import.meta.env.BASE_URL;
 
   return (
     <>
       <Navbar activeSection={activeSection} theme={theme} toggleTheme={toggleTheme} />
-      <Hero meta={aboutMeta} bodyHtml={aboutBody} tagline={taglines[taglineIdx]} />
+      <Hero meta={aboutMeta} bodyHtml={aboutBody} tagline={taglines[taglineIdx]} base={base} />
       <Section id="experience" title="Experience">
         <Experience items={experience} />
       </Section>
@@ -612,13 +620,13 @@ function App() {
         <Education items={education} />
       </Section>
       <Section id="certifications" title="Certifications">
-        <Certifications items={certifications} />
+        <Certifications items={certifications} base={base} />
       </Section>
       <Section id="research" title="Research">
         <Research items={research} />
       </Section>
       <Section id="projects" title="Projects" subtitle="A collection of things I've built — from AI systems to web applications.">
-        <Projects items={projects} />
+        <Projects items={projects} base={base} />
       </Section>
       <Section id="resume" title="Resume">
         <div className="resume-pro-wrapper">
@@ -631,7 +639,7 @@ function App() {
                 <h3>Grab My Resume</h3>
                 <p>A concise, overview of my technical and soft skills, professional experience, and key accomplishments.</p>
               </div>
-              <a href="/resume.pdf" download className="btn-pro-download">
+              <a href={`${base}resume.pdf`} download className="btn-pro-download">
                 <span>Download PDF</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               </a>
