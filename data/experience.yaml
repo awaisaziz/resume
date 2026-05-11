@@ -1,0 +1,72 @@
+experience:
+  - role: Full Stack Engineer
+    company: Big Bazzaar, Ottawa, CA
+    date: Apr 2026 – Jun 2026
+    highlights:
+      - "Designed and deployed a full-stack application using React on AWS Amplify, with Lambda handling backend logic and RDS databases, delivering a scalable cloud-native production environment."
+      - "Led infrastructure migration from Vercel to AWS, configuring cloud services and CI/CD pipelines to improve deployment reliability and long-term scalability."
+      - "Authored technical documentation and onboarding guides, enabling seamless knowledge transfer and reducing ramp-up time for incoming developers."
+
+  - role: Teaching Assistant
+    company: York University, Toronto, CA
+    date: Sep 2025 - Apr 2026
+    highlights:
+      - "Led structured tutorial sessions for undergraduate students, taking ownership of session planning and delivery to drive measurable improvements in student engagement."
+      - "Mentored students individually to identify performance gaps and build confidence, demonstrating initiative and a results-driven approach to development."
+      - "Coordinated directly with faculty to align goals and streamline course operations, strengthening organizational and cross-functional communication skills."
+
+  - role: AI Developer
+    company: Iter Innovandi, Toronto, CA
+    date: Jul 2024 - Nov 2024
+    highlights:
+      - "Built a python-based text-to-speech pipeline integrating ElevenLabs AI voice models, improving audio quality and reducing manual processing overhead."
+      - "Integrated ChatGPT for LLM processing and prompt orchestration, automating response workflows and reducing manual intervention."
+      - "Partnered with cross-functional stakeholders to translate business requirements into scalable AI features, accelerating delivery timelines and ensuring alignment with product goals."
+
+  - role: App Developer
+    company: Interact Health PRO, Toronto, CA
+    date: Jul 2024 - Oct 2024
+    highlights:
+      - "Enhanced user engagement by developing personalized health reminders and notifications, helping users stay on top of their daily health routines."
+      - "Utilized Tailwind CSS and Figma to design and implement a responsive, user-friendly interface, ensuring a seamless user experience across various screen sizes."
+      - "Built a mobile application using React Native and Expo to deliver cross-platform functionality for both iOS and Android devices."
+
+  - role: Teaching Assistant (Calculus II & Linear Algebra II)
+    company: University of Toronto Scarborough, Scarborough, CA
+    date: Jan 2024 - Aug 2024
+    highlights:
+      - "Designed and delivered problem-solving workshops for Calculus II and Linear Algebra II, breaking down abstract concepts into structured steps that improved student comprehension and exam readiness."
+      - "Leveraged ROSI and Quercus to maintain accurate academic records, post course updates, and ensure students had consistent access to timely and reliable course information."
+      - "Collaborated with the course supervisor on a weekly basis to align tutorial content with lecture progression, ensuring cohesive and well-paced delivery across both courses."
+
+  - role: Teaching Assistant (Calculus II for Bio Sciences, Linear Algebra II)
+    company: University of Toronto Scarborough, Scarborough, CA
+    date: Jan 2024 - Aug 2024
+    highlights:
+      - "Tailored instructional approaches to a biology-focused student cohort, contextualizing calculus concepts within real-world biological applications to increase relevance and retention."
+      - "Facilitated active learning environments by incorporating open-ended questions and peer discussion, fostering critical thinking and sustained student participation throughout tutorials."
+      - "Assessed and returned student work with constructive written feedback, contributing to a transparent grading process and supporting continuous academic improvement."
+
+  - role: Configuration Management CMDB
+    company: Softchoice, Toronto, CA
+    date: Sep 2023 - Apr 2024
+    highlights:
+      - "Maintained efficiency in handling tickets, by processing an average of 100-130 tickets monthly, with a focus on tasks including CMDB Updates and CI Not Found resolutions."
+      - "Developed and presented detailed reports to manager, enhancing transparency and project tracking."
+      - "Identify, Understand & Process variety of tickets (Case, RITM, Task, Change Record, and Incident) & how they are related. Familiarized with ITIL practices."
+
+  - role: Teaching Assistant (Linear Algebra II)
+    company: University of Toronto Scarborough, Scarborough, CA
+    date: Jan 2023 - Apr 2023
+    highlights:
+      - "Delivered targeted one-on-one and small group support for Linear Algebra II, addressing individual knowledge gaps and reinforcing foundational concepts to build long-term student confidence."
+      - "Upheld academic integrity by invigilating examinations and handling reported misconduct with professionalism, discretion, and strict adherence to institutional policies."
+      - "Provided accessible and approachable academic guidance during office hours, creating a supportive environment that encouraged students to seek help and take ownership of their learning."
+
+  - role: Service Desk Analyst
+    company: Ontario Shores Centre for Mental Health Sciences, Whitby, CA
+    date: Sep 2021 - Dec 2021
+    highlights:
+      - "Provided technical assistance to hospital staff, patients, and external healthcare professionals by troubleshooting medical software, user devices, and network connectivity issues."
+      - "Facilitated remote technical support for doctors and administrative staff, ensuring seamless operation of telehealth services and other digital healthcare platforms."
+      - "Maintained security and compliance on Active Directory by accurately assigning access levels and user privileges based on organizational policies."

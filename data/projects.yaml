@@ -1,0 +1,77 @@
+﻿projects:
+  - name: ScanMatch
+    description: A brand places a QR code on physical products, packaging, or in-store displays. When a customer scans it, they get a snappy 3-question quiz and instantly receive AI-personalized product recommendations.
+    tech: [JavaScript, CSS, HTML]
+    repo_url: https://github.com/awaisaziz/scanmatch
+    image: images/projects/scanmatch.jpg
+    live_url: ""
+
+  - name: SparqMind
+    description: Engineered a Chain-of-Thought pipeline with an interactive verification layer to increase transparency, enabling users to validate reasoning and ensure data integrity prior to query execution.
+    tech: [Python, JavaScript, CSS, HTML, Shell]
+    repo_url: https://github.com/awaisaziz/LLM_Text2Sparql_Query
+    image: images/projects/text2sparql.jpg
+    live_url: ""
+
+  - name: Uncertainty Text2SQL
+    description: An uncertainty-aware Text-to-SQL system that translates natural language questions into SQL queries, while quantifying model confidence to flag potentially incorrect or ambiguous outputs.
+    tech: [Python]
+    repo_url: https://github.com/awaisaziz/uncertainity-text2sql
+    image: images/projects/text2sql.jpg
+    live_url: ""
+
+  - name: Text-to-SQL Generation Using LLM
+    description: Architected a retrieval-augmented generation (RAG) NLP pipeline for automated Text-to-SQL generation and execution-based self-consistency validation.
+    tech: [Python]
+    repo_url: https://github.com/awaisaziz/LLM_Text2SQL_Query
+    image: images/projects/llm-sql.jpg
+    live_url: ""
+
+  - name: CHub
+    description: A full-featured web platform for collaborative development, offering project management, team coordination, and resource-sharing tools built with a modern TypeScript stack.
+    tech: [TypeScript, CSS, HTML]
+    repo_url: https://github.com/awaisaziz/CHub
+    image: images/projects/chub.jpg
+    live_url: ""
+
+  - name: Voyage Canada
+    description: A web application built for the University of Toronto CSCC09 course. Helps users plan and share travel routes across Canada with interactive maps and user-generated content.
+    tech: [JavaScript, CSS, HTML]
+    repo_url: https://github.com/awaisaziz/Voyage-Canada
+    image: images/projects/voyage-canada.jpg
+    live_url: ""
+
+  - name: Lottery Ticket
+    description: A Java-based electronic lottery system where users purchase tickets and participate in draws to win monetary prizes, featuring user account management and result tracking.
+    tech: [Java]
+    repo_url: https://github.com/awaisaziz/Lottery_ticket
+    image: images/projects/lottery.jpg
+    live_url: ""
+
+  - name: Linux Shell
+    description: A custom Unix-like shell implemented in Java supporting command execution, piping, I/O redirection, background processes, and built-in commands like cd, pwd, and history.
+    tech: [Java]
+    repo_url: https://github.com/awaisaziz/LinuxShell
+    image: images/projects/linux-shell.jpg
+    live_url: ""
+
+  - name: KNN Prediction
+    description: A C implementation of the K-Nearest Neighbours classification algorithm applied to a real-world dataset, with configurable k-values and performance benchmarking.
+    tech: [C]
+    repo_url: https://github.com/awaisaziz/KNN_prediction
+    image: images/projects/knn.jpg
+    live_url: ""
+
+  - name: Patient Management System
+    description: A C-based patient record management system featuring CRUD operations, dynamic memory management, and file persistence for storing and retrieving patient health data.
+    tech: [C]
+    repo_url: https://github.com/awaisaziz/Patient_Management
+    image: images/projects/patient.jpg
+    live_url: ""
+
+  - name: CSCB58 Assembly Game
+    description: A retro-style interactive game written in MIPS Assembly for the University of Toronto CSCB58 computer organization course, running on the MARS simulator.
+    tech: [Assembly]
+    repo_url: https://github.com/awaisaziz/cscb58-W22-game
+    image: images/projects/assembly-game.jpg
+    live_url: ""

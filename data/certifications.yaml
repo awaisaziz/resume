@@ -1,0 +1,36 @@
+# Update badge_url and credential_url with your actual badge images and credential links.
+certifications:
+  - name: AWS Application Networking Demonstrated
+    issuer: Amazon Web Services
+    badge_url: "images/certifications/application-networking.png"
+    credential_url: "https://www.credly.com/badges/0fb4774b-9fbc-4ab8-b7a0-3160fa89b7a3"
+
+  - name: AWS Certified Machine Learning Engineer – Associate
+    issuer: Amazon Web Services
+    badge_url: "images/certifications/machine-learning-engineer.jpg"
+    credential_url: "https://www.credly.com/badges/1b988b3d-664a-4bd7-9f73-5449ff37f02f"
+
+  - name: AWS Certified AI Practitioner
+    issuer: Amazon Web Services
+    badge_url: "images/certifications/ai-practitioner.jpg"
+    credential_url: "https://www.credly.com/badges/5a079456-6ec4-4645-968f-8b0a1180b9e9"
+
+  - name: AWS Certified Developer – Associate
+    issuer: Amazon Web Services
+    badge_url: "images/certifications/developer.jpg"
+    credential_url: "https://www.credly.com/badges/8406c1c2-614e-4d8f-b956-6151979a9785"
+
+  - name: AWS Certified Solutions Architect – Associate
+    issuer: Amazon Web Services
+    badge_url: "images/certifications/solutions-architect.png"
+    credential_url: "https://www.credly.com/badges/20de6b05-54d9-4280-8719-fa3ef7443123"
+
+  - name: AWS Certified Cloud Practitioner
+    issuer: Amazon Web Services
+    badge_url: "images/certifications/cloud-practitioner.png"
+    credential_url: "https://www.credly.com/badges/c1759f7b-46be-44d3-ac08-de49b1d2f70e"
+
+  - name: Oracle Cloud Infrastructure 2024 Generative AI Certified Professional
+    issuer: Oracle
+    badge_url: "images/certifications/Oracle Cloud Infrastructure 2024 Generative AI Professional.jpg"
+    credential_url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=DCF96EB8A32213452B5D85D91FE06B1884557A965924C60B741B0EF78FDA6BF9"
