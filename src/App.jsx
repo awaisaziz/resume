@@ -536,13 +536,14 @@ function App() {
 
     const fetchData = async () => {
       try {
+        const base = import.meta.env.BASE_URL;
         const [aboutRes, expRes, eduRes, resRes, certRes, projRes] = await Promise.all([
-          fetch('/about.md'),
-          fetch('/data/experience.yaml'),
-          fetch('/data/education.yaml'),
-          fetch('/data/research.yaml'),
-          fetch('/data/certifications.yaml'),
-          fetch('/data/projects.yaml')
+          fetch(`${base}about.md`),
+          fetch(`${base}data/experience.yaml`),
+          fetch(`${base}data/education.yaml`),
+          fetch(`${base}data/research.yaml`),
+          fetch(`${base}data/certifications.yaml`),
+          fetch(`${base}data/projects.yaml`)
         ]);
         const aboutText = await aboutRes.text();
         const expText = await expRes.text();
