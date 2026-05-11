@@ -1606,3 +1606,399 @@ code {
     padding: 0.6rem 1rem;
   }
 }
+
+/* ============================================================
+   MOBILE — Comprehensive responsive overhaul
+   Breakpoints: 768px (tablet/large phone), 480px (phone)
+   ============================================================ */
+
+/* ---- Global spacing tightening on mobile ---- */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* ---- Navbar mobile ---- */
+@media (max-width: 768px) {
+  .nav-logo {
+    font-size: 1.05rem;
+  }
+
+  /* Larger tap targets for nav links */
+  .nav-links a {
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Ensure the hamburger is easily tappable */
+  .nav-toggle {
+    padding: 0.75rem;
+    margin-right: -0.5rem;
+  }
+
+  .nav-toggle span {
+    width: 24px;
+    height: 2.5px;
+  }
+}
+
+/* ---- Hero mobile ---- */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: calc(var(--nav-height) + 2rem) 1rem 4rem;
+    min-height: 100svh;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.75rem;
+  }
+
+  .hero-left {
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero-social-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .social-icon {
+    width: auto;
+    max-width: none;
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 140px;
+    justify-content: center;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .social-icon span {
+    display: none; /* show icon only on small phones, text on tablets */
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-greeting {
+    font-size: 0.9rem;
+  }
+
+  .hero-name {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+  }
+
+  .hero-title {
+    font-size: 1.1rem;
+  }
+
+  .hero-bio {
+    font-size: 0.95rem;
+    max-width: 100%;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .hero-scroll-indicator {
+    display: none; /* too much vertical space on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero-name {
+    font-size: clamp(1.75rem, 9vw, 2.25rem);
+  }
+
+  .hero-title {
+    font-size: 1rem;
+  }
+
+  /* On very small screens show text in social links again */
+  .social-icon {
+    flex: 1 1 100%;
+  }
+
+  .social-icon span {
+    display: inline;
+  }
+}
+
+/* ---- Timeline mobile ---- */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 1.75rem;
+  }
+
+  .timeline-item {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Disable horizontal slide on mobile (hurts layout) */
+  .timeline-item:hover {
+    transform: none;
+  }
+
+  .timeline-item::before {
+    left: -2.25rem;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-degree {
+    font-size: 1rem;
+  }
+
+  .timeline-institution {
+    font-size: 0.88rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.88rem;
+  }
+
+  .experience-list li {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+}
+
+/* ---- Certifications mobile ---- */
+@media (max-width: 768px) {
+  .cert-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .cert-card {
+    padding: 1.25rem;
+  }
+
+  /* Disable lift on mobile */
+  .cert-card:hover {
+    transform: none;
+  }
+
+  .cert-badge {
+    width: 64px;
+    height: 64px;
+  }
+
+  .cert-name {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Research mobile ---- */
+@media (max-width: 768px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .research-card {
+    padding: 1.25rem;
+  }
+
+  .research-card:hover {
+    transform: none;
+  }
+
+  .research-title {
+    font-size: 1.05rem;
+  }
+}
+
+/* ---- Projects mobile ---- */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .project-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .project-img-wrap {
+    height: 160px;
+  }
+
+  .project-body {
+    padding: 1.1rem;
+    gap: 0.6rem;
+  }
+
+  .project-name {
+    font-size: 1rem;
+  }
+
+  .project-desc {
+    font-size: 0.85rem;
+  }
+
+  .tech-pill {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .project-actions {
+    flex-wrap: nowrap;
+  }
+
+  .project-actions .btn {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ---- Resume card mobile ---- */
+@media (max-width: 768px) {
+  .resume-pro-content {
+    padding: 2rem 1.25rem;
+    gap: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .resume-pro-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .resume-pro-text p {
+    font-size: 0.95rem;
+  }
+
+  .resume-pro-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    transform: none;
+  }
+
+  .resume-pro-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-pro-download {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ---- Contact form mobile ---- */
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 1.5rem 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .contact-form {
+    gap: 1.25rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* prevents iOS zoom on focus */
+    padding: 0.85rem 0.9rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+}
+
+/* ---- Footer mobile ---- */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.75rem 1rem;
+  }
+
+  .footer p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ---- Back to top mobile ---- */
+@media (max-width: 480px) {
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .back-to-top svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* ---- Disable ripple on touch devices (performance) ---- */
+@media (hover: none) and (pointer: coarse) {
+  .ripple {
+    display: none;
+  }
+
+  /* Remove hover-only transforms that feel glitchy on touch */
+  .timeline-item:hover,
+  .cert-card:hover,
+  .research-card:hover,
+  .project-card:hover,
+  .social-icon:hover,
+  .resume-pro-card:hover {
+    transform: none;
+  }
+}
