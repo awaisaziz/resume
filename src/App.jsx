@@ -279,6 +279,12 @@ const ContactForm = () => {
       return;
     }
 
+    // Check if email contains '@'
+    if (!formData.email.includes('@')) {
+      setStatus('VALIDATION_ERROR_EMAIL');
+      return;
+    }
+
     setIsSending(true);
     setStatus('');
 
@@ -332,8 +338,9 @@ const ContactForm = () => {
         </div>
 
         {status === 'VALIDATION_ERROR' && <p className="form-status error" style={{ margin: '0', textAlign: 'left', color: 'var(--warning)' }}>Please fill out all fields.</p>}
-        {status === 'ERROR' && <p className="form-status error" style={{ margin: '0', textAlign: 'left', color: '#ef4444' }}>Error</p>}
-        {status === 'SUCCESS' && <p className="form-status success" style={{ margin: '0', textAlign: 'left', color: 'var(--success)' }}>Success!</p>}
+        {status === 'VALIDATION_ERROR_EMAIL' && <p className="form-status error" style={{ margin: '0', textAlign: 'left', color: 'var(--warning)' }}>Please enter a valid email address containing '@'.</p>}
+        {status === 'ERROR' && <p className="form-status error" style={{ margin: '0', textAlign: 'left', color: '#ef4444' }}>Error sending message. Please try again later.</p>}
+        {status === 'SUCCESS' && <p className="form-status success" style={{ margin: '0', textAlign: 'left', color: 'var(--success)' }}>Message sent successfully!</p>}
 
         <button
           type="submit"
